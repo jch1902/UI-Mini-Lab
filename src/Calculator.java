@@ -68,6 +68,12 @@ public class Calculator
         
         //Clear button (figure out how to make it work)
         JButton Bclear = new JButton("C");
+        Bclear.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		textField.setText("0");
+        		text = "";
+        	}
+        });
         Bclear.setFont(new Font("Arial", Font.BOLD, 25));
         Bclear.setBounds(10, 90, 70, 70);
         frame.getContentPane().add(Bclear);
@@ -253,6 +259,10 @@ public class Calculator
         
         //Decimal button (figure out how to make it work)
         JButton Bdec = new JButton(".");
+        Bdec.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        	}
+        });
         Bdec.setFont(new Font("Tahoma", Font.BOLD, 25));
         Bdec.setBounds(160, 390, 70, 70);
         frame.getContentPane().add(Bdec);
